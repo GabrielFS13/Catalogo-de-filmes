@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de filmes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+</head>
+<body>
+    <!--Desenvolvido por: GabrielFS13 >>> https://github.com/GabrielFS13 -->
+    <h1>Mova para o lado (PC: Scroll)</h1>
+    <div class="item-wrapper">
+        <div class="items" id="items">
+            {% for item in r['results'] %}
+            <div class="item">
+                <h2>Título: {{item['title']}}</h2>
+                {% if item['overview'] == '' %}
+                <p>Sinopse: Indisponível</p>
+                {% else %}
+                <p>Sinopse: {{item['overview']}}</p>
+                {% endif %}
+                
+            <div class="carrossel">
+                <div class="container" id="img">
+                    <img src='https://image.tmdb.org/t/p/w500/{{item["poster_path"]}}' class="poster" >
+                </div>
+            </div>   
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+        
+        <a href = '' id='less' onClick = 'mudaLink(1)'>
+        <button><<<</button>
+        </a>
+    
+        <a href = '' id='plus' onClick = 'mudaLink(2)'>
+        <button>>>></button>
+        </a>
+    
+
+
+<script src="{{ url_for('static', filename='main.js') }}"></script>
+<script>
+    var a = document.getElementById('plus')
+    var b = document.getElementById('less')
+
+    link = window.location.href
+    link = link.split("/")
+    link = parseInt(link[3])
+
+
+    if(!link){
+        link = 1
+    }
+
+    a.href = link + 1
+
+    if(link > 0){
+        b.href = link - 1
+    }
+   
+
+</script>
+</body>
+</html>
