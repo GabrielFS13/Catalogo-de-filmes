@@ -1,5 +1,13 @@
-<h1> Catalagos de filmes </h1>
+# Catalogo de filmes
 
+Rápida descrição do objetivo de fazer esse projeto
 
-<h2>Feito utilizando Flask e a API do The Movie Database (TMDB) </h2>
+| :placard: Vitrine.Dev |     |
+| -------------  | --- |
+| :sparkles: Nome        | **Catalogo de Filmes**
+| :label: Tecnologias | python, html, css
+| :rocket: URL         | X
+| :fire: Desafio     | X
 
+<!-- Inserir imagem com a #vitrinedev ao final do link -->
+![](https://via.placeholder.com/1200x500.png?text=algum-dia-entra-uma-foto-aqui#vitrinedev)
