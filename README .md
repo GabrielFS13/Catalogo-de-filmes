@@ -1,6 +1,6 @@
 # Catalogo de filmes
 
-Rápida descrição do objetivo de fazer esse projeto
+Rápida descrição
 
 | :placard: Vitrine.Dev |     |
 | -------------  | --- |
