@@ -64,6 +64,10 @@ p::-webkit-scrollbar {
 }
 
 
+.buttons{
+    display: flex;
+}
+
 img{
     object-fit: contain;
     width: 450px;
