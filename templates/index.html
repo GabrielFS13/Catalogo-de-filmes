@@ -34,8 +34,9 @@
     </div>
     <div class="buttons">
         <a href='' id='less' onClick='mudaLink(1)'>
-            <button>
-                <<<< /button>
+            <button id="back">
+                <<<< 
+            </button>
         </a>
 
         <a href='' id='plus' onClick='mudaLink(2)'>
@@ -55,6 +56,9 @@
         link = link.split("/")
         link = parseInt(link[3])
 
+        if(link == 1 || !link){
+            document.querySelector("#back").disabled = true
+        }
 
         if (!link) {
             link = 1
